@@ -1,0 +1,11 @@
+node_modules/
+client/dist/
+data/*.db
+data/*.db-shm
+data/*.db-wal
+data/mail-preview/
+.env
+.env.local
+*.log
+.DS_Store
+coverage/

@@ -1,0 +1,46 @@
+:root {
+  --ink: #0a0c0f;
+  --panel: #10151a;
+  --panel-2: #151c23;
+  --panel-3: #1a222b;
+  --line: #1f2933;
+  --line-strong: #2b3844;
+
+  --paper: #e8e4da;
+  --paper-dim: #b9b4a8;
+  --muted: #8a94a0;
+  --muted-2: #6b7480;
+
+  --signal: #f2b01e;
+  --signal-dim: #a87a10;
+  --verified: #4ade80;
+  --likely: #d8b04a;
+  --danger: #e5484d;
+  --watch: #9ca3af;
+
+  --bg: var(--ink);
+  --fg: var(--paper);
+  --card: var(--panel);
+  --border: var(--line);
+
+  --font-display: "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", Georgia, serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans CJK SC",
+    "Microsoft YaHei", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --s7: 48px;
+  --s8: 64px;
+
+  --rail-w: 304px;
+  --aside-w: 380px;
+  --topbar-h: 56px;
+  --radius: 2px;
+  --shadow: 0 1px 0 rgba(255, 255, 255, 0.04), 0 8px 24px rgba(0, 0, 0, 0.35);
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}

@@ -1,0 +1,32 @@
+{
+  "name": "signal-radar",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "SIGNAL - 本地优先的 AI 热点雷达",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:server": "node --watch server/server.mjs",
+    "dev:client": "vite",
+    "build": "vite build",
+    "start": "NODE_ENV=production node server/server.mjs",
+    "test": "node --test tests/unit/*.test.mjs tests/integration/*.test.mjs",
+    "scan": "node server/cli/radar.mjs scan"
+  },
+  "dependencies": {
+    "cheerio": "1.2.0",
+    "express": "5.3.0",
+    "fast-xml-parser": "5.11.2",
+    "nodemailer": "10.2.1",
+    "robots-parser": "3.0.1",
+    "vue": "2.7.16",
+    "vue-router": "3.6.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue2": "2.3.4",
+    "vite": "7.3.7"
+  }
+}

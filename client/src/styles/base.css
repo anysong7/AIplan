@@ -1,0 +1,242 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+html {
+  background: var(--ink);
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.7;
+  background:
+    radial-gradient(1200px 600px at 78% -10%, rgba(242, 176, 30, 0.07), transparent 60%),
+    radial-gradient(900px 500px at 8% 110%, rgba(74, 222, 128, 0.045), transparent 60%),
+    linear-gradient(180deg, #0a0c0f 0%, #090b0e 100%);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(circle at 50% 20%, black, transparent 85%);
+  z-index: 0;
+}
+
+a {
+  color: var(--signal);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+::selection {
+  background: var(--signal);
+  color: #17130a;
+}
+
+:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 2px;
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #26313c;
+  border: 3px solid var(--ink);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #33414f;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--paper);
+  border-radius: var(--radius);
+  font-size: 13px;
+  transition: background 160ms var(--ease), border-color 160ms var(--ease), color 160ms var(--ease);
+}
+.btn:hover {
+  background: var(--panel-2);
+  border-color: #3a4958;
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background: var(--signal);
+  border-color: var(--signal);
+  color: #17130a;
+  font-weight: 600;
+}
+.btn-primary:hover {
+  background: #ffc23c;
+  border-color: #ffc23c;
+}
+.btn-ghost {
+  border-color: transparent;
+  color: var(--paper-dim);
+}
+.btn-ghost:hover {
+  color: var(--paper);
+  background: var(--panel-2);
+  border-color: var(--line);
+}
+.btn-danger {
+  color: var(--danger);
+  border-color: rgba(229, 72, 77, 0.4);
+}
+.btn-danger:hover {
+  background: rgba(229, 72, 77, 0.12);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  flex: none;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.field {
+  width: 100%;
+  min-height: 38px;
+  padding: 7px 10px;
+  background: #0d1217;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--paper);
+  font-size: 13px;
+}
+.field::placeholder {
+  color: #5d6672;
+}
+.field:focus {
+  border-color: var(--signal-dim);
+  outline: none;
+  box-shadow: 0 0 0 1px var(--signal-dim);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--paper-dim);
+  white-space: nowrap;
+}
+
+.divider {
+  height: 1px;
+  background: var(--line);
+  border: 0;
+  margin: var(--s4) 0;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #131a21 25%, #1a232c 37%, #131a21 63%);
+  background-size: 400% 100%;
+  animation: skeleton 1.4s ease infinite;
+}
+@keyframes skeleton {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
